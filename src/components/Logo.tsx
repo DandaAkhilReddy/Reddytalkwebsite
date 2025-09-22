@@ -11,6 +11,7 @@ interface LogoProps {
 
 const Logo: React.FC<LogoProps> = ({ className = '', size = 'md', variant = 'full' }) => {
   const [imgFailed, setImgFailed] = React.useState(false);
+  const [triedPng, setTriedPng] = React.useState(false);
 
   const fullHeights: Record<NonNullable<LogoProps['size']>, number> = {
     sm: 24,
@@ -85,32 +86,45 @@ const Logo: React.FC<LogoProps> = ({ className = '', size = 'md', variant = 'ful
     return renderFallback();
   }
 
-  const src = variant === 'icon' ? '/reddytalk-logo-icon.png' : '/reddytalk-logo.png';
+  const svgSrc = variant === 'icon' ? '/reddytalk-logo-icon.svg' : '/reddytalk-logo.svg';
+  const pngSrc = variant === 'icon' ? '/reddytalk-logo-icon.png' : '/reddytalk-logo.png';
+  const src = triedPng ? pngSrc : svgSrc;
 
+  // Use a plain <img> for SVG to avoid any Next/Image quirks and ensure rendering
   if (variant === 'icon') {
     const dimension = iconSizes[size];
     return (
-      <Image
+      <img
         src={src}
         alt="Reddytalk logo"
         width={dimension}
         height={dimension}
         className={className}
-        onError={() => setImgFailed(true)}
-        priority
+        onError={() => {
+          if (!triedPng) {
+            setTriedPng(true);
+          } else {
+            setImgFailed(true);
+          }
+        }}
       />
     );
   }
 
   return (
-    <Image
+    <img
       src={src}
       alt="Reddytalk"
       width={fullWidths[size]}
       height={fullHeights[size]}
       className={className}
-      onError={() => setImgFailed(true)}
-      priority
+      onError={() => {
+        if (!triedPng) {
+          setTriedPng(true);
+        } else {
+          setImgFailed(true);
+        }
+      }}
     />
   );
 };

@@ -37,7 +37,7 @@ export default function Home() {
       <nav className="fixed w-full top-0 z-50 bg-white/95 backdrop-blur-lg shadow-lg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
-            <Logo />
+            <Logo variant="full" size="md" className="h-10 w-auto" />
 
             <div className="hidden md:flex items-center space-x-8">
               <a href="#features" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">Features</a>
@@ -255,7 +255,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
             <div className="md:col-span-2">
-              <Logo className="mb-6" />
+              <Logo variant="full" size="md" className="mb-6 h-8 w-auto" />
               <p className="text-gray-300 mb-6 max-w-md">
                 AI-powered clinical communication platform transforming healthcare one call at a time.
               </p>
