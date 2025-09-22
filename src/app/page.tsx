@@ -57,7 +57,7 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-20 bg-gradient-to-br from-blue-500 via-purple-600 to-indigo-700 gradient-animate">
+      <section className="pt-20 bg-gradient-to-br from-purple-600 via-blue-600 to-pink-600">
         <AnimatedHero />
       </section>
 
@@ -72,7 +72,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <div className="inline-block px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mb-6">
-              <span className="text-white font-bold text-lg">🤖 YOUR AI AGENCY</span>
+              <span className="text-white font-bold text-lg">🤖 AI HEALTHCARE TEAM</span>
             </div>
             <h2 className="text-5xl md:text-6xl font-black mb-4">
               <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
@@ -231,7 +231,7 @@ export default function Home() {
       <section className="py-20 bg-gradient-to-r from-blue-500 to-purple-600 text-white text-center">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-black mb-4">Ready to Transform Your Patient Communication?</h2>
-          <p className="text-xl mb-8 opacity-95">Join 500+ healthcare providers already using ReddyTalk.ai</p>
+          <p className="text-xl mb-8 opacity-95">Join healthcare providers transforming patient communication</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
               onClick={handleScheduleDemo}

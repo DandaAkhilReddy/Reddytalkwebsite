@@ -51,8 +51,8 @@ const AnimatedHero: React.FC = () => {
           transform: `translateX(${mousePosition.x}px) translateY(${mousePosition.y}px) rotateX(${mousePosition.y * 0.1}deg) rotateY(${mousePosition.x * 0.1}deg)`,
         }}
       >
-        <div className="text-white text-6xl font-bold">Smart</div>
-        <div className="text-white/80">AI Assistant</div>
+        <div className="text-white text-6xl font-bold">98%</div>
+        <div className="text-white/80">Success Rate</div>
       </div>
 
       <div
@@ -61,8 +61,8 @@ const AnimatedHero: React.FC = () => {
           transform: `translateX(${-mousePosition.x}px) translateY(${-mousePosition.y}px) rotateX(${-mousePosition.y * 0.1}deg) rotateY(${-mousePosition.x * 0.1}deg)`,
         }}
       >
-        <div className="text-white text-6xl font-bold">Natural</div>
-        <div className="text-white/80">Conversations</div>
+        <div className="text-white text-6xl font-bold">24/7</div>
+        <div className="text-white/80">Always Online</div>
       </div>
 
       {/* Main content */}
@@ -75,20 +75,20 @@ const AnimatedHero: React.FC = () => {
           </div>
 
           <h1 className="text-6xl md:text-7xl lg:text-8xl font-black text-white mb-6">
-            <span className="inline-block animate-fadeInUp">Transform</span>{' '}
-            <span className="inline-block animate-fadeInUp" style={{ animationDelay: '0.1s' }}>Your</span>{' '}
-            <span className="inline-block animate-fadeInUp text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-orange-400" style={{ animationDelay: '0.2s' }}>Healthcare</span>
+            <span className="inline-block animate-fadeInUp">Never</span>{' '}
+            <span className="inline-block animate-fadeInUp" style={{ animationDelay: '0.1s' }}>Miss</span>{' '}
+            <span className="inline-block animate-fadeInUp" style={{ animationDelay: '0.2s' }}>a</span>
             <br />
             <span className="inline-block animate-fadeInUp text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-orange-400" style={{ animationDelay: '0.3s' }}>
-              Communication
+              Patient Call
             </span>
             <br />
-            <span className="inline-block animate-fadeInUp" style={{ animationDelay: '0.4s' }}></span>
+            <span className="inline-block animate-fadeInUp" style={{ animationDelay: '0.4s' }}>Again</span>
           </h1>
 
           <p className="text-xl md:text-2xl lg:text-3xl text-white/90 mb-12 max-w-4xl mx-auto leading-relaxed animate-fadeInUp" style={{ animationDelay: '0.5s' }}>
             AI-powered call management that handles every patient interaction{' '}
-            <span className="font-bold text-yellow-300">Natural</span>, with{' '}
+            <span className="font-bold text-yellow-300">24/7</span>, with{' '}
             <span className="font-bold text-green-400 text-4xl text-glow">99.99%</span>{' '}
             accuracy. Your AI agency working for YOU.
           </p>
