@@ -1,0 +1,38 @@
+{
+  "name": "@reddytalk/web",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ReddyTalk Public Website",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint . --ext ts,tsx",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf .next out node_modules"
+  },
+  "dependencies": {
+    "@radix-ui/react-dialog": "^1.0.0",
+    "@radix-ui/react-tooltip": "^1.0.0",
+    "@tailwindcss/postcss": "^4.1.13",
+    "clsx": "^2.0.0",
+    "date-fns": "^3.0.0",
+    "framer-motion": "^12.0.0",
+    "lucide-react": "^0.544.0",
+    "next": "15.5.3",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "react-intersection-observer": "^9.0.0",
+    "tailwind-merge": "^2.0.0",
+    "zustand": "^4.5.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "eslint": "^8.0.0",
+    "eslint-config-next": "15.5.3",
+    "tailwindcss": "^4.0.0",
+    "typescript": "^5.0.0"
+  }
+}
