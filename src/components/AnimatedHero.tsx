@@ -24,20 +24,34 @@ const AnimatedHero: React.FC = () => {
     <div className="relative min-h-screen overflow-hidden">
       {/* Animated background particles */}
       <div className="absolute inset-0">
-        {[...Array(50)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute rounded-full bg-white/10"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              width: `${Math.random() * 6 + 2}px`,
-              height: `${Math.random() * 6 + 2}px`,
-              animation: `float ${Math.random() * 10 + 10}s ease-in-out infinite`,
-              animationDelay: `${Math.random() * 5}s`
-            }}
-          />
-        ))}
+        {[...Array(50)].map((_, i) => {
+          // Deterministic pseudo-random generator based on index so SSR = CSR
+          const seeded = (seed: number) => {
+            const x = Math.sin(i * 12.9898 + seed * 78.233) * 43758.5453;
+            return x - Math.floor(x); // 0..1
+          };
+
+          const left = seeded(1) * 100;
+          const top = seeded(2) * 100;
+          const size = 2 + seeded(3) * 6; // 2..8px
+          const duration = 10 + seeded(4) * 10; // 10..20s
+          const delay = seeded(5) * 5; // 0..5s
+
+          return (
+            <div
+              key={i}
+              className="absolute rounded-full bg-white/10"
+              style={{
+                left: `${left}%`,
+                top: `${top}%`,
+                width: `${size}px`,
+                height: `${size}px`,
+                animation: `float ${duration}s ease-in-out infinite`,
+                animationDelay: `${delay}s`
+              }}
+            />
+          );
+        })}
       </div>
 
       {/* Gradient orbs */}
