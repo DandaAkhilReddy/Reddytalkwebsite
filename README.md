@@ -130,8 +130,7 @@ Creates optimized static files in the `out/` directory.
 ## 📧 Contact & Support
 
 - **Website**: https://reddytalk.ai
-- **Email**: hello@reddytalk.ai
-- **Repository**: https://github.com/DandaAkhilReddy/Reddytalkwebsite
+- **Email**: info@reddytalk.ai
 
 ## 📄 License
 
